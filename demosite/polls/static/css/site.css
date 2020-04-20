@@ -1,0 +1,31 @@
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 300px;
+    margin: 0 auto;
+    gap:1em;
+}
+
+#vote {
+grid-column: 2;
+}
+
+body > h1:nth-child(2) {
+text-align: center;
+}
+body {
+    font: normal normal 300 16px/21px "myriad-pro",helvetica;
+}
+
+#header {    
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #142433;
+    color: #333;
+    font-weight: 300;
+    z-index: 99;
+    padding: 10px;
+    height: 45px;
+}
