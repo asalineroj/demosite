@@ -25,7 +25,7 @@ SECRET_KEY = '6q^7@)w!-a(v^ixb-!&_!n(t&sa52!pa!2obc(vp9k7d97a5c$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['bs-local.com']
+ALLOWED_HOSTS = ['bs-local.com', '127.0.0.1']
 
 
 # Application definition
