@@ -13,7 +13,7 @@ class IndexView(LoginRequiredMixin, generic.ListView):
     template_name = 'polls/index.html'
     context_object_name = 'latest_question_list'
     login_url = '/accounts/login/'
-    redirect_field_name = 'redirect_to'
+    redirect_field_name = 'next'
     
     def get_queryset(self):
         """Return the last five published questions."""
@@ -30,7 +30,7 @@ class ResultsView(generic.DetailView):
     template_name = 'polls/results.html'
 
 
-@login_required
+@login_required(redirect_field_name="next")
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     try:
