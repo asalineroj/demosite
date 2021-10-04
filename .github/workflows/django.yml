@@ -1,4 +1,4 @@
-name: Django CI
+name: Cypress Browserstack CI
 
 on:
   push:
@@ -46,6 +46,9 @@ jobs:
           local-identifier: random
     - name: Install
       run: yarn
+      working-directory: ./demosite
+    - name: Browserstack Tests
+      run: npx browserstack-cypress run --sync
       working-directory: ./demosite
     - name: Percy Test
       run: npx percy exec -- cypress run
