@@ -13,7 +13,7 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        python-version: [3.7, 3.8, 3.9]
+        python-version: [3.7]
 
     steps:
     - uses: actions/checkout@v2
@@ -26,9 +26,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Run Migration
-      run: ${{ github.workspace }}/demosite/manage.py migrate
+      working-directory: ./demosite
+      run: manage.py migrate
     - name: Run Server
-      run: python ${{ github.workspace }}/demosite/manage.py runserver >/dev/null 2>&1 </dev/null & disown   
+      working-directory: ./demosite
+      run: python manage.py runserver >/dev/null 2>&1 </dev/null & disown   
     - name: BrowserStack Actions
       # You may pin to the exact commit or the version.
       # uses: browserstack/github-actions@00ce173eae311a7838f80682a5fad5144c4219ad
@@ -45,9 +47,11 @@ jobs:
           local-logging-level: all-logs
           local-identifier: random
     - name: Install
-      run: ${{ github.workspace }}/demosite/yarn
+      working-directory: ./demosite
+      run: yarn
     - name: Percy Test
-      run: ${{ github.workspace }}/demosite/npx percy exec -- cypress run
+      working-directory: ./demosite
+      run: npx percy exec -- cypress run
       env:
           BROWSERSTACK_USERNAME: ${{secrets.BROWSERSTACK_USERNAME}}
           BROWSERSTACK_ACCESS_KEY: ${{secrets.BROWSERSTACK_ACCESS_KEY}}
