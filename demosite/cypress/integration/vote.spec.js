@@ -33,14 +33,14 @@ describe("Authenticated sections", () => {
       Cypress.Cookies.preserveOnce("sessionid", "csrftoken");
     });
 
-    it("Can visit List view through the UI", function () {
+    it("Can vote poll 1 through the UI", function () {
         cy.visit("http://localhost:8000/polls/1/");
         cy.get('#choice1').should("be.visible")
         cy.percySnapshot("Poll 1")
         cy.get('#choice1').click()
     });
 
-    it("Can visit List view through the UI", function () {
+    it("Can poll 2 through the UI", function () {
         cy.visit("http://localhost:8000/polls/2/");
         cy.get('#choice1').should("be.visible")
         cy.percySnapshot("Poll 2")
