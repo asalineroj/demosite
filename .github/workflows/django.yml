@@ -45,9 +45,9 @@ jobs:
           local-logging-level: all-logs
           local-identifier: random
     - name: Install
-      run: yarn
+      run: ${{ github.workspace }}/demosite/yarn
     - name: Percy Test
-      run: npx percy exec -- cypress run
+      run: ${{ github.workspace }}/demosite/npx percy exec -- cypress run
       env:
           BROWSERSTACK_USERNAME: ${{secrets.BROWSERSTACK_USERNAME}}
           BROWSERSTACK_ACCESS_KEY: ${{secrets.BROWSERSTACK_ACCESS_KEY}}
