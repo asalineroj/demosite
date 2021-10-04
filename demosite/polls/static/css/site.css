@@ -21,9 +21,11 @@ body {
     font: normal normal 300 16px/21px "myriad-pro",helvetica;
 }
 
+/*
 body > form > label {
     color: green;
 }
+*/
 /* 
 label {
     color: green;
