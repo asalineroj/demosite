@@ -5,3 +5,4 @@ __pycache__
 */cypress/videos/
 */results/
 local.log
+yarn.lock
