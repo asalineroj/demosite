@@ -1,0 +1,12 @@
+[
+    {
+       "username":"bs-demo",
+       "email": "",
+       "password":"hunter1234"
+    },
+    {
+        "username":"test_user",
+        "email": "",
+        "password":"dummy1234"
+    }
+]
