@@ -1,12 +1,12 @@
 {
     "auth": {
-        "username": "<Your BrowserStack username>",
-        "access_key": "<Your BrowserStack access key>"
+        "username": "BROWSERSTACK_USERNAME",
+        "access_key": "BROWSERSTACK_ACCESS_KEY"
     },
     "browsers": [
         {
             "browser": "chrome",
-            "os": "Windows 10",
+            "os": "OS X Big Sur",
             "versions": [
                 "latest",
                 "latest-1"
@@ -14,7 +14,7 @@
         },
         {
             "browser": "firefox",
-            "os": "Windows 10",
+            "os": "OS X Big Sur",
             "versions": [
                 "latest",
                 "latest-1"
@@ -22,55 +22,7 @@
         },
         {
             "browser": "edge",
-            "os": "Windows 10",
-            "versions": [
-                "latest",
-                "latest-1"
-            ]
-        },
-        {
-            "browser": "chrome",
-            "os": "OS X Mojave",
-            "versions": [
-                "latest",
-                "latest-1"
-            ]
-        },
-        {
-            "browser": "firefox",
-            "os": "OS X Mojave",
-            "versions": [
-                "latest",
-                "latest-1"
-            ]
-        },
-        {
-            "browser": "edge",
-            "os": "OS X Mojave",
-            "versions": [
-                "latest",
-                "latest-1"
-            ]
-        },
-        {
-            "browser": "chrome",
-            "os": "OS X Catalina",
-            "versions": [
-                "latest",
-                "latest-1"
-            ]
-        },
-        {
-            "browser": "firefox",
-            "os": "OS X Catalina",
-            "versions": [
-                "latest",
-                "latest-1"
-            ]
-        },
-        {
-            "browser": "edge",
-            "os": "OS X Catalina",
+            "os": "OS X Big Sur",
             "versions": [
                 "latest",
                 "latest-1"
@@ -78,18 +30,20 @@
         }
     ],
     "run_settings": {
-        "cypress_config_file": "/path/to/<cypress config file>.json",
-        "project_name": "project-name",
-        "build_name": "build-name",
+        "cypress_config_file": "./cypress.json",
+        "project_name": "Cypress Percy Browserstack",
+        "build_name": "Smoke Tests",
+        "cypress_version": "8",
         "exclude": [],
-        "parallels": "Here goes the number of parallels you want to run",
+        "parallels": "5",
         "npm_dependencies": {},
         "package_config_options": {},
+        "sys_env_vars": ["BROWSERSTACK_PROJECT_NAME","BROWSERSTACK_BUILD_NAME"],
         "headless": true
     },
     "connection_settings": {
-        "local": false,
-        "local_identifier": null,
+        "local": "BROWSERSTACK_LOCAL",
+        "local_identifier": "BROWSERSTACK_LOCAL_IDENTIFIER",
         "local_mode": null,
         "local_config_file": null
     },
