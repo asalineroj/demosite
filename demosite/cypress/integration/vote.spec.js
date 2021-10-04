@@ -36,14 +36,14 @@ describe("Authenticated sections", () => {
     it("Can visit List view through the UI", function () {
         cy.visit("http://localhost:8000/polls/1/");
         cy.get('#choice1').should("be.visible")
-        cy.percysnapshot("Poll 1")
+        cy.percySnapshot("Poll 1")
         cy.get('#choice1').click()
     });
 
     it("Can visit List view through the UI", function () {
         cy.visit("http://localhost:8000/polls/2/");
         cy.get('#choice1').should("be.visible")
-        cy.percysnapshot("Poll 2")
+        cy.percySnapshot("Poll 2")
         cy.get('#choice1').click()
     });
 
