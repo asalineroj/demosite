@@ -26,11 +26,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Run Migration
-      working-directory: ./demosite
-      run: manage.py migrate
+      run: ${{ github.workspace }}/manage.py migrate
     - name: Run Server
-      working-directory: ./demosite
-      run: python manage.py runserver >/dev/null 2>&1 </dev/null & disown   
+      run: python ${{ github.workspace }}/manage.py runserver >/dev/null 2>&1 </dev/null & disown  
     - name: BrowserStack Actions
       # You may pin to the exact commit or the version.
       # uses: browserstack/github-actions@00ce173eae311a7838f80682a5fad5144c4219ad
