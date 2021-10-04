@@ -7,7 +7,7 @@ This site is for running Selenium Examples against.
 In a terminal run the following
 
 ```bash
-pip install -r requirements
+pip install -r requirements.txt
 ```
 
 ## Running
