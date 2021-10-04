@@ -47,14 +47,12 @@ jobs:
     - name: Install
       run: yarn
     - name: Percy Test
-      uses: percy/exec-action@v0.3.1
+      run: npx percy exec -- cypress run
       env:
           BROWSERSTACK_USERNAME: ${{secrets.BROWSERSTACK_USERNAME}}
           BROWSERSTACK_ACCESS_KEY: ${{secrets.BROWSERSTACK_ACCESS_KEY}}
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
           PERCY_ENABLE: 1
-      with:
-        command: "cypress run"
     - name: 'Stop BrowserStackLocal'
       uses: 'browserstack/github-actions/setup-local@master'
       with:
