@@ -45,7 +45,7 @@
         "headless": true
     },
     "connection_settings": {
-        "local": "BROWSERSTACK_LOCAL",
+        "local": true,
         "local_identifier": "BROWSERSTACK_LOCAL_IDENTIFIER",
         "local_mode": null,
         "local_config_file": null
