@@ -36,7 +36,10 @@
         "cypress_version": "8",
         "exclude": [],
         "parallels": "5",
-        "npm_dependencies": {},
+        "npm_dependencies": {
+            "@percy/cli": "^1.0.0-beta.68",
+            "@percy/cypress": "^3.1.1"
+        },
         "package_config_options": {},
         "sys_env_vars": ["BROWSERSTACK_PROJECT_NAME","BROWSERSTACK_BUILD_NAME"],
         "headless": true

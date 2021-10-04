@@ -21,6 +21,10 @@ body {
     font: normal normal 300 16px/21px "myriad-pro",helvetica;
 }
 
+body > label {
+    color: green;
+}
+
 #header {    
     position: relative;
     width: 100%;
