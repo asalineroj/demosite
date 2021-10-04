@@ -1,0 +1,22 @@
+{
+  "name": "demosite",
+  "version": "1.0.0",
+  "description": "demosite for test setups",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andressalinero/demosite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andressalinero/demosite/issues"
+  },
+  "homepage": "https://github.com/andressalinero/demosite#readme",
+  "devDependencies": {
+    "cypress": "^8.5.0"
+  }
+}
