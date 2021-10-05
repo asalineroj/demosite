@@ -21,14 +21,9 @@ body {
     font: normal normal 300 16px/21px "myriad-pro",helvetica;
 }
 
-/*
-body > form > label {
-    font-size: larger;
-    color: darkblue;
-}
-*/ 
 label {
-    color: green;
+    color: darkblue;
+    font-size: larger;
 }
 
 #header {    
