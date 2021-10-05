@@ -23,14 +23,13 @@ body {
 
 /*
 body > form > label {
-    color: green;
+    font-size: larger;
+    color: darkblue;
 }
-*/
-/* 
+*/ 
 label {
     color: green;
 }
-*/
 
 #header {    
     position: relative;
