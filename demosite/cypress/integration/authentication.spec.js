@@ -24,5 +24,4 @@ describe("Login", () => {
         cy.percySnapshot('Login Wrong Password')
         cy.getCookie("sessionid").should("not.exist");
       });
-
-  });
+})
